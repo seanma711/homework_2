@@ -9,7 +9,7 @@
     <ul>
       <% @recipes.where(difficulty: 1).each do |f|%>
         <li>
-          <h3><%= link_to f.name, recipe_path %></h3>
+          <h3><%= link_to f.name, recipe_path(f.id) %></h3>
         </li>
       <%end%>
     </ul>
@@ -17,7 +17,7 @@
     <ul>
       <% @recipes.where(difficulty: 2).each do |f|%>
         <li>
-          <h3><%= link_to f.name, recipe_path %></h3>
+          <h3><%= link_to f.name, recipe_path(f.id) %></h3>
         </li>
       <%end%>
     </ul>
@@ -25,7 +25,7 @@
     <ul>
       <% @recipes.where(difficulty: 3).each do |f|%>
         <li>
-          <h3><%= link_to f.name, recipe_path %></h3>
+          <h3><%= link_to f.name, recipe_path(f.id) %></h3>
         </li>
       <%end%>
     </ul>
@@ -33,7 +33,7 @@
     <ul>
       <% @recipes.where(difficulty: 4).each do |f|%>
         <li>
-          <h3><%= link_to f.name, recipe_path %></h3>
+          <h3><%= link_to f.name, recipe_path(f.id) %></h3>
         </li>
       <%end%>
     </ul>
@@ -41,7 +41,7 @@
     <ul>
       <% @recipes.where(difficulty: 5).each do |f|%>
         <li>
-          <h3><%= link_to f.name, recipe_path %></h3>
+          <h3><%= link_to f.name, recipe_path(f.id) %></h3>
         </li>
       <%end%>
     </ul>

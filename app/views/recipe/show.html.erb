@@ -5,20 +5,25 @@
     <title></title>
   </head>
   <body>
-    <h1><%=@recipe.name%></h1>
-    <b>Author: </b><%=@recipe.author%>
-    <b>Difficulty: </b><%=@recipe.difficulty.to_s%>
-    <b>Cooking Time: </b><%=@recipe.cooking_time.to_s%>
-    <b>Price: </b><%=@recipe.price.to_s%>
+    <h1><%=@recipe.name%></h1><br>
+    <b>Author: </b><%=@recipe.author%><br>
+    <b>Difficulty: </b><%=@recipe.difficulty.to_s%><br>
+    <b>Cooking Time: </b><%=@recipe.cooking_time.to_s%><br>
+    <b>Price: </b><%=@recipe.price.to_s%><br>
     <b>Ingredients:</b>
-    <ul class="ingredients">
+    <ul id="ingredients">
 
     </ul>
     <script type="text/javascript">
-      let ingredients = <%@ingredients%>;
-      let arrayingredients = ingredients.parse(" ")
+      let ingredients = '<%=@ingredients.to_s%>';
+      let arrayingredients = ingredients.split(" ")
       for (var i = 0; i < arrayingredients.length; i++) {
-        
+        var newIngredient = document.createElement("li");
+        console.log(newIngredient)
+        var newContent = document.createTextNode(arrayingredients[i]);
+        console.log(newContent);
+        newIngredient.appendChild(newContent);
+        var currentDiv = document.getElementById("ingredients").appendChild(newIngredient);
       }
     </script>
   </body>
