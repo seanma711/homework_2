@@ -11,7 +11,7 @@
     <b>Cooking Time: </b><%=@recipe.cooking_time.to_s%><br>
     <b>Price: </b><%=@recipe.price.to_s%><br>
     <b>Ingredients:</b>
-    <ul id="ingredients">
+    <ul id="ing">
 
     </ul>
     <script type="text/javascript">
@@ -23,7 +23,7 @@
         var newContent = document.createTextNode(arrayingredients[i]);
         console.log(newContent);
         newIngredient.appendChild(newContent);
-        var currentDiv = document.getElementById("ingredients").appendChild(newIngredient);
+        var currentDiv = document.getElementById("ing").appendChild(newIngredient);
       }
     </script>
   </body>
