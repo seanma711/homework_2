@@ -5,6 +5,21 @@
     <title></title>
   </head>
   <body>
+    <h1><%=@recipe.name%></h1>
+    <b>Author: </b><%=@recipe.author%>
+    <b>Difficulty: </b><%=@recipe.difficulty.to_s%>
+    <b>Cooking Time: </b><%=@recipe.cooking_time.to_s%>
+    <b>Price: </b><%=@recipe.price.to_s%>
+    <b>Ingredients:</b>
+    <ul class="ingredients">
 
+    </ul>
+    <script type="text/javascript">
+      let ingredients = <%@ingredients%>;
+      let arrayingredients = ingredients.parse(" ")
+      for (var i = 0; i < arrayingredients.length; i++) {
+        
+      }
+    </script>
   </body>
 </html>
