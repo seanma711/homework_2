@@ -1,4 +1,4 @@
-class Show Controller < ApplicationController
+class ShowController < ApplicationController
   def index
     @shows = Show.all.order(start_date: :desc)
   end
